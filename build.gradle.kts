@@ -23,6 +23,10 @@ subprojects {
         maven("https://papermc.io/repo/repository/maven-public/")
     }
 
+    dependencies {
+        compileOnlyApi("org.checkerframework", "checker-qual", "3.10.0")
+    }
+
     indra {
         javaVersions {
             target.set(8)

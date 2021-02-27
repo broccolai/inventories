@@ -6,10 +6,11 @@ import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 public final class BukkitMenuManager extends MenuManager<Player, ItemStack> {
     @Override
-    public void internal(Player player, Menu<ItemStack, ?> menu) {
+    public void internal(final @NonNull Player player, final @NonNull Menu<ItemStack, ?> menu) {
         Inventory inventory = Bukkit.createInventory(player, 36);
         menu.items().forEach(inventory::setItem);
 
